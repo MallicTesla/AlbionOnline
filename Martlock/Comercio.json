@@ -1,0 +1,243 @@
+{
+    "Items": [
+        {
+            "Item": "Piel Dura",
+            "Tier": 2,
+            "Tipo": "Base",
+            "Si_Compro": 127,
+            "Si_Vendo": 72
+        },
+
+        {
+            "Item": "Cuero Firme",
+            "Tier": 2,
+            "Tipo": "Fabricado",
+            "Si_Compro": 76,
+            "Si_Vendo": 69,
+            "Componentes": [
+                {
+                    "Item": "Piel Dura",
+                    "Cantidad": 1
+                }
+            ]
+        },
+
+        {
+            "Item": "Piel Fina",
+            "Tier": 3,
+            "Tipo": "Base",
+            "Si_Compro": 142,
+            "Si_Vendo": 130
+        },
+
+        {
+            "Item": "Cuero Grueso",
+            "Tier": 3,
+            "Tipo": "Fabricado",
+            "Si_Compro": 282,
+            "Si_Vendo": 224,
+            "Componentes": [
+                {
+                    "Item": "Piel Fina",
+                    "Cantidad": 2
+                },
+                {
+                    "Item": "Cuero Firme",
+                    "Cantidad": 1
+                }
+            ]
+        },
+
+        {
+            "Item": "Piedra Caliza",
+            "Tier": 2,
+            "Tipo": "Base",
+            "Si_Compro": 29,
+            "Si_Vendo": 21
+        },
+
+        {
+            "Item": "Bloque de piedra caliza",
+            "Tier": 2,
+            "Tipo": "Fabricado",
+            "Si_Compro": 52,
+            "Si_Vendo": 37,
+            "Componentes": [
+                {
+                    "Item": "Piedra Caliza",
+                    "Cantidad": 1
+                }
+            ]
+        },
+
+        {
+            "Item": "Aremisca",
+            "Tier": 3,
+            "Tipo": "Base",
+            "Si_Compro": 56,
+            "Si_Vendo": 40
+        },
+
+        {
+            "Item": "Bloque de Arenisca",
+            "Tier": 3,
+            "Tipo": "Fabricado",
+            "Si_Compro": 180,
+            "Si_Vendo": 114,
+            "Componentes": [
+                {
+                    "Item": "Aremisca",
+                    "Cantidad": 2
+                },
+                {
+                    "Item": "Bloque de piedra caliza",
+                    "Cantidad": 1
+                }
+            ]
+        },
+
+        {
+            "Item": "Tronco de abedul",
+            "Tier": 2,
+            "Tipo": "Base",
+            "Si_Compro": 121,
+            "Si_Vendo": 40
+        },
+
+        {
+            "Item": "Tablon de abedul",
+            "Tier": 2,
+            "Tipo": "Fabricado",
+            "Si_Compro": 21,
+            "Si_Vendo": 18,
+            "Componentes": [
+                {
+                    "Item": "Tronco de abedul",
+                    "Cantidad": 1
+                }
+            ]
+        },
+
+        {
+            "Item": "Tronco de castaño",
+            "Tier": 3,
+            "Tipo": "Base",
+            "Si_Compro": 126,
+            "Si_Vendo": 94
+        },
+
+        {
+            "Item": "Tablon de castaño",
+            "Tier": 3,
+            "Tipo": "Fabricado",
+            "Si_Compro": 272,
+            "Si_Vendo": 207,
+            "Componentes": [
+                {
+                    "Item": "Tronco de castaño",
+                    "Cantidad": 2
+                },
+                {
+                    "Item": "Tablon de castaño",
+                    "Cantidad": 1
+                }
+            ]
+        },
+
+        {
+            "Item": "Mineral de cobre",
+            "Tier": 2,
+            "Tipo": "Base",
+            "Si_Compro": 59,
+            "Si_Vendo": 28
+        },
+
+        {
+            "Item": "Lingote de cobre",
+            "Tier": 2,
+            "Tipo": "Fabricado",
+            "Si_Compro": 22,
+            "Si_Vendo": 18,
+            "Componentes": [
+                {
+                    "Item": "Mineral de cobre",
+                    "Cantidad": 1
+                }
+            ]
+        },
+
+        {
+            "Item": "Mineral de estaño",
+            "Tier": 3,
+            "Tipo": "Base",
+            "Si_Compro": 137,
+            "Si_Vendo": 89
+        },
+
+        {
+            "Item": "Lingote de bronse",
+            "Tier": 3,
+            "Tipo": "Fabricado",
+            "Si_Compro": 223,
+            "Si_Vendo": 187,
+            "Componentes": [
+                {
+                    "Item": "Mineral de estaño",
+                    "Cantidad": 2
+                },
+                {
+                    "Item": "Lingote de cobre",
+                    "Cantidad": 1
+                }
+            ]
+        },
+
+        {
+            "Item": "Algodon",
+            "Tier": 2,
+            "Tipo": "Base",
+            "Si_Compro": 32,
+            "Si_Vendo": 29
+        },
+
+        {
+            "Item": "Tela simple",
+            "Tier": 2,
+            "Tipo": "Fabricado",
+            "Si_Compro": 22,
+            "Si_Vendo": 18,
+            "Componentes": [
+                {
+                    "Item": "Algodon",
+                    "Cantidad": 1
+                }
+            ]
+        },
+
+        {
+            "Item": "Lino",
+            "Tier": 3,
+            "Tipo": "Base",
+            "Si_Compro": 151,
+            "Si_Vendo": 88
+        },
+
+        {
+            "Item": "Tela pulcra",
+            "Tier": 3,
+            "Tipo": "Fabricado",
+            "Si_Compro": 184,
+            "Si_Vendo": 139,
+            "Componentes": [
+                {
+                    "Item": "Lino",
+                    "Cantidad": 2
+                },
+                {
+                    "Item": "Tela simple",
+                    "Cantidad": 1
+                }
+            ]
+        }
+    ]
+}
