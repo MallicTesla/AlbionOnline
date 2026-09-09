@@ -65,7 +65,11 @@ def calcular_oportunidades(precios_por_item):
                         }
                     )
 
-    return sorted(oportunidades, key=lambda oportunidad: oportunidad["ganancia"], reverse=True)
+    return sorted(
+        oportunidades,
+        key=lambda oportunidad: oportunidad["rentabilidad"],
+        reverse=True,
+    )
 
 
 def main():

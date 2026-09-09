@@ -4,7 +4,7 @@
             "Item": "Piel Dura",
             "Tier": 2,
             "Tipo": "Base",
-            "Si_Compro": 165,
+            "Si_Compro": 150,
             "Si_Vendo": 63
         },
 
@@ -12,7 +12,7 @@
             "Item": "Cuero Firme",
             "Tier": 2,
             "Tipo": "Fabricado",
-            "Si_Compro": 79,
+            "Si_Compro": 68,
             "Si_Vendo": 61,
             "Componentes": [
                 {
@@ -26,7 +26,7 @@
             "Item": "Piel Fina",
             "Tier": 3,
             "Tipo": "Base",
-            "Si_Compro": 133,
+            "Si_Compro": 104,
             "Si_Vendo": 121
         },
 
@@ -34,7 +34,7 @@
             "Item": "Cuero Grueso",
             "Tier": 3,
             "Tipo": "Fabricado",
-            "Si_Compro": 292,
+            "Si_Compro": 332,
             "Si_Vendo": 259,
             "Componentes": [
                 {
@@ -52,7 +52,7 @@
             "Item": "Piedra Caliza",
             "Tier": 2,
             "Tipo": "Base",
-            "Si_Compro": 0,
+            "Si_Compro": 65,
             "Si_Vendo": 38
         },
 
@@ -60,7 +60,7 @@
             "Item": "Bloque de piedra caliza",
             "Tier": 2,
             "Tipo": "Fabricado",
-            "Si_Compro": 26,
+            "Si_Compro": 35,
             "Si_Vendo": 22,
             "Componentes": [
                 {
@@ -74,7 +74,7 @@
             "Item": "Aremisca",
             "Tier": 3,
             "Tipo": "Base",
-            "Si_Compro": 94,
+            "Si_Compro": 86,
             "Si_Vendo": 70
         },
 
@@ -82,7 +82,7 @@
             "Item": "Bloque de Arenisca",
             "Tier": 3,
             "Tipo": "Fabricado",
-            "Si_Compro": 180,
+            "Si_Compro": 168,
             "Si_Vendo": 111,
             "Componentes": [
                 {
@@ -100,7 +100,7 @@
             "Item": "Tronco de abedul",
             "Tier": 2,
             "Tipo": "Base",
-            "Si_Compro": 54,
+            "Si_Compro": 43,
             "Si_Vendo": 46
         },
 
@@ -108,7 +108,7 @@
             "Item": "Tablon de abedul",
             "Tier": 2,
             "Tipo": "Fabricado",
-            "Si_Compro": 21,
+            "Si_Compro": 25,
             "Si_Vendo": 18,
             "Componentes": [
                 {
@@ -122,7 +122,7 @@
             "Item": "Tronco de castaño",
             "Tier": 3,
             "Tipo": "Base",
-            "Si_Compro": 87,
+            "Si_Compro": 124,
             "Si_Vendo": 71
         },
 
@@ -130,7 +130,7 @@
             "Item": "Tablon de castaño",
             "Tier": 3,
             "Tipo": "Fabricado",
-            "Si_Compro": 247,
+            "Si_Compro": 285,
             "Si_Vendo": 169,
             "Componentes": [
                 {
@@ -148,7 +148,7 @@
             "Item": "Mineral de cobre",
             "Tier": 2,
             "Tipo": "Base",
-            "Si_Compro": 33,
+            "Si_Compro": 37,
             "Si_Vendo": 29
         },
 
@@ -156,7 +156,7 @@
             "Item": "Lingote de cobre",
             "Tier": 2,
             "Tipo": "Fabricado",
-            "Si_Compro": 23,
+            "Si_Compro": 22,
             "Si_Vendo": 23,
             "Componentes": [
                 {
@@ -170,7 +170,7 @@
             "Item": "Mineral de estaño",
             "Tier": 3,
             "Tipo": "Base",
-            "Si_Compro": 96,
+            "Si_Compro": 98,
             "Si_Vendo": 86
         },
 
@@ -178,7 +178,7 @@
             "Item": "Lingote de bronse",
             "Tier": 3,
             "Tipo": "Fabricado",
-            "Si_Compro": 181,
+            "Si_Compro": 160,
             "Si_Vendo": 84,
             "Componentes": [
                 {
@@ -196,7 +196,7 @@
             "Item": "Algodon",
             "Tier": 2,
             "Tipo": "Base",
-            "Si_Compro": 34,
+            "Si_Compro": 39,
             "Si_Vendo": 30
         },
 
@@ -204,7 +204,7 @@
             "Item": "Tela simple",
             "Tier": 2,
             "Tipo": "Fabricado",
-            "Si_Compro": 21,
+            "Si_Compro": 24,
             "Si_Vendo": 18,
             "Componentes": [
                 {
@@ -218,7 +218,7 @@
             "Item": "Lino",
             "Tier": 3,
             "Tipo": "Base",
-            "Si_Compro": 116,
+            "Si_Compro": 133,
             "Si_Vendo": 86
         },
 
@@ -226,7 +226,7 @@
             "Item": "Tela pulcra",
             "Tier": 3,
             "Tipo": "Fabricado",
-            "Si_Compro": 198,
+            "Si_Compro": 210,
             "Si_Vendo": 115,
             "Componentes": [
                 {
