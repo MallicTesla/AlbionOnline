@@ -81,8 +81,10 @@ def main():
 
     for oportunidad in oportunidades:
         print(
-            f"{oportunidad['item']}: comprar en {oportunidad['origen']} por "
-            f"{oportunidad['costo']} y vender en {oportunidad['destino']} por "
+            f"\033[32m{oportunidad['item']}\033[0m: comprar en "
+            f"\033[92m{oportunidad['origen']}\033[0m por "
+            f"{oportunidad['costo']} y vender en "
+            f"\033[31m{oportunidad['destino']}\033[0m por "
             f"{oportunidad['venta']} | Ganancia: {oportunidad['ganancia']} "
             f"| Rentabilidad: {oportunidad['rentabilidad']:.2f}%"
         )
