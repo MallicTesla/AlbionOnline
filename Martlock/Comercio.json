@@ -238,6 +238,136 @@
                     "Cantidad": 1
                 }
             ]
+        },
+
+        {
+            "Item": "Piel media",
+            "Tier": 4,
+            "Tipo": "Base",
+            "Si_Compro": 130,
+            "Si_Vendo": 224
+        },
+
+        {
+            "Item": "Cuer trabajado",
+            "Tier": 4,
+            "Tipo": "Fabricado",
+            "Si_Compro": 265,
+            "Si_Vendo": 224,
+            "Componentes": [
+                {
+                    "Item": "Piel media",
+                    "Cantidad": 2
+                },
+                {
+                    "Item": "Cuero Grueso",
+                    "Cantidad": 1
+                }
+            ]
+        },
+
+        {
+            "Item": "Travertino",
+            "Tier": 4,
+            "Tipo": "Base",
+            "Si_Compro": 7,
+            "Si_Vendo": 21
+        },
+
+        {
+            "Item": "Bloque Travertino",
+            "Tier": 4,
+            "Tipo": "Fabricado",
+            "Si_Compro": 7,
+            "Si_Vendo": 21,
+            "Componentes": [
+                {
+                    "Item": "Travertino",
+                    "Cantidad": 2
+                },
+                {
+                    "Item": "Bloque de Arenisca",
+                    "Cantidad": 1
+                }
+            ]
+        },
+
+        {
+            "Item": "Tronco de pino",
+            "Tier": 4,
+            "Tipo": "Base",
+            "Si_Compro": 104,
+            "Si_Vendo": 207
+        },
+
+        {
+            "Item": "Tablon de pino",
+            "Tier": 4,
+            "Tipo": "Fabricado",
+            "Si_Compro": 104,
+            "Si_Vendo": 207,
+            "Componentes": [
+                {
+                    "Item": "Tronco de pino",
+                    "Cantidad": 2
+                },
+                {
+                    "Item": "Tablon de castaño",
+                    "Cantidad": 1
+                }
+            ]
+        },
+
+        {
+            "Item": "Mineral de acero",
+            "Tier": 4,
+            "Tipo": "Base",
+            "Si_Compro": 181,
+            "Si_Vendo": 187
+        },
+
+        {
+            "Item": "Mineral de hiero",
+            "Tier": 4,
+            "Tipo": "Fabricado",
+            "Si_Compro": 181,
+            "Si_Vendo": 187,
+            "Componentes": [
+                {
+                    "Item": "Mineral de hiero",
+                    "Cantidad": 2
+                },
+                {
+                    "Item": "Lingote de bronse",
+                    "Cantidad": 1
+                }
+            ]
+        },
+
+        {
+            "Item": "Cañamo",
+            "Tier": 4,
+            "Tipo": "Base",
+            "Si_Compro": 101,
+            "Si_Vendo": 139
+        },
+
+        {
+            "Item": "Tela fina",
+            "Tier": 4,
+            "Tipo": "Fabricado",
+            "Si_Compro": 400,
+            "Si_Vendo": 139,
+            "Componentes": [
+                {
+                    "Item": "Cañamo",
+                    "Cantidad": 2
+                },
+                {
+                    "Item": "Tela pulcra",
+                    "Cantidad": 1
+                }
+            ]
         }
     ]
 }
