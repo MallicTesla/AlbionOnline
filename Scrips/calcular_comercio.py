@@ -6,6 +6,13 @@ from pathlib import Path
 
 RAIZ_PROYECTO = Path(__file__).resolve().parent.parent
 NOMBRE_ARCHIVO = "Comercio.json"
+RESET = "\033[0m"
+VERDE = "\033[32m"
+VERDE_CLARO = "\033[92m"
+ROJO = "\033[31m"
+CIAN = "\033[96m"
+AMARILLO = "\033[93m"
+MAGENTA = "\033[95m"
 
 
 def cargar_precios():
@@ -79,14 +86,15 @@ def main():
         print("No hay oportunidades rentables con los precios disponibles.")
         return
 
-    for oportunidad in oportunidades:
+    for numero, oportunidad in enumerate(oportunidades, start=1):
         print(
-            f"\033[32m{oportunidad['item']}\033[0m: comprar en "
-            f"\033[92m{oportunidad['origen']}\033[0m por "
-            f"{oportunidad['costo']} y vender en "
-            f"\033[31m{oportunidad['destino']}\033[0m por "
-            f"{oportunidad['venta']} | Ganancia: {oportunidad['ganancia']} "
-            f"| Rentabilidad: {oportunidad['rentabilidad']:.2f}%"
+            f"{MAGENTA}{numero}.{RESET} {CIAN}{oportunidad['item']}{RESET}: "
+            f"comprar en {VERDE_CLARO}{oportunidad['origen']}{RESET} por "
+            f"{AMARILLO}{oportunidad['costo']}{RESET} y vender en "
+            f"{ROJO}{oportunidad['destino']}{RESET} por "
+            f"{AMARILLO}{oportunidad['venta']}{RESET} | Ganancia: "
+            f"{VERDE}{oportunidad['ganancia']}{RESET} | Rentabilidad: "
+            f"{VERDE_CLARO}{oportunidad['rentabilidad']:.2f}%{RESET}"
         )
 
 

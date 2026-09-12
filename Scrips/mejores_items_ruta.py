@@ -6,8 +6,8 @@ from pathlib import Path
 
 # Una ciudad permite una ruta normal; dos ciudades permiten compararlas.
 # Ejemplos: ["Lymhurst"] o ["Bridgewach", "Fort Sterling"]
-compro_en = "Lymhurst"
-vendo_en = ["Bridgewach", "Fort Sterling"]
+compro_en = "Martlock"
+vendo_en = ["Thetford"]
 
 RAIZ_PROYECTO = Path(__file__).resolve().parent.parent
 NOMBRE_ARCHIVO = "Comercio.json"

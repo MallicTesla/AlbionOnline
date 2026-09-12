@@ -16,10 +16,10 @@
         {"item": "Travertino", "compra": 8, "venta": 21},
         {"item": "Bloque Travertino", "compra": 82, "venta": 21},
 
-        {"item": "Tronco de abedul", "compra": 46, "venta": 40},
+        {"item": "Tronco de abedul", "compra": 55, "venta": 40},
         {"item": "Tablon de abedul", "compra": 21, "venta": 18},
         {"item": "Tronco de castaño", "compra": 112, "venta": 94},
-        {"item": "Tablon de castaño", "compra": 437, "venta": 207},
+        {"item": "Tablon de castaño", "compra": 435, "venta": 207},
         {"item": "Tronco de pino", "compra": 90, "venta": 207},
         {"item": "Tablon de pino", "compra": 323, "venta": 207},
 
@@ -130,7 +130,7 @@
         {"item": "Travertino", "compra": 11, "venta": 21},
         {"item": "Bloque Travertino", "compra": 92, "venta": 21},
 
-        {"item": "Tronco de abedul", "compra": 111, "venta": 40},
+        {"item": "Tronco de abedul", "compra": 109, "venta": 40},
         {"item": "Tablon de abedul", "compra": 22, "venta": 18},
         {"item": "Tronco de castaño", "compra": 119, "venta": 94},
         {"item": "Tablon de castaño", "compra": 247, "venta": 207},
@@ -179,7 +179,7 @@
         {"item": "Lingote de cobre", "compra": 21, "venta": 18},
         {"item": "Mineral de estaño", "compra": 142, "venta": 89},
         {"item": "Lingote de bronse", "compra": 167, "venta": 187},
-        {"item": "Mineral de hierro", "compra": 232, "venta": 187},
+        {"item": "Mineral de hierro", "compra": 131, "venta": 187},
         {"item": "Lingote de acero", "compra": 295, "venta": 187},
 
         {"item": "Algodon", "compra": 18, "venta": 29},

@@ -100,7 +100,7 @@
             "Item": "Tronco de abedul",
             "Tier": 2,
             "Tipo": "Base",
-            "Si_Compro": 46,
+            "Si_Compro": 55,
             "Si_Vendo": 40
         },
 
@@ -130,7 +130,7 @@
             "Item": "Tablon de castaño",
             "Tier": 3,
             "Tipo": "Fabricado",
-            "Si_Compro": 437,
+            "Si_Compro": 435,
             "Si_Vendo": 207,
             "Componentes": [
                 {
