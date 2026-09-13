@@ -8,7 +8,7 @@ from pathlib import Path
 # Ejemplos: ["Lymhurst"] o ["Bridgewach", "Fort Sterling"]
 # "Bridgewach", "Thetford" , "Fort Sterling", "Lymhurst", "Martlock",
 compro_en = "Martlock"
-vendo_en = ["Bridgewach"]
+vendo_en = ["Fort Sterling"]
 
 RAIZ_PROYECTO = Path(__file__).resolve().parent.parent
 NOMBRE_ARCHIVO = "Comercio.json"
