@@ -60,7 +60,7 @@
             "Item": "Bloque de piedra caliza",
             "Tier": 2,
             "Tipo": "Fabricado",
-            "Si_Compro": 21,
+            "Si_Compro": 22,
             "Si_Vendo": 37,
             "Componentes": [
                 {
@@ -278,7 +278,7 @@
             "Item": "Bloque Travertino",
             "Tier": 4,
             "Tipo": "Fabricado",
-            "Si_Compro": 98,
+            "Si_Compro": 100,
             "Si_Vendo": 21,
             "Componentes": [
                 {
