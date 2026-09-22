@@ -1,0 +1,23 @@
+{
+    "Items": [
+        {
+            "Estacion": "Tegedura",
+            "Devolusion_sin_Foco": 36.7,
+            "Devolusion_con_Foco": 42,
+            "Refinado": [
+                {
+                    "Tier": 2,
+                    "Costo": 0,
+                    "Foco": 18,
+                    "Valor_de_objeto": 4
+                },{
+                    "Tier": 3,
+                    "Costo" : 3.7,
+                    "Foco": 31,
+                    "Valor_de_objeto": 8
+                },{
+                }
+            ]
+        }
+    ]
+}
