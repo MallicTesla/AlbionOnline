@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 # Escribe aquí el nombre exacto del ítem que quieres consultar.
-item_a_buscar = "Aremisca"
+item_a_buscar = "tronco de roble rojo"
 
 RAIZ_PROYECTO = Path(__file__).resolve().parent.parent
 NOMBRE_ARCHIVO = "Comercio.json"
