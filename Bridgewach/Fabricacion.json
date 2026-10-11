@@ -2,6 +2,7 @@
     "Items": [
         {
             "Estacion": "Cantera",
+            "Nutricion": 610,
             "Devolusion_sin_Foco": 36.7,
             "Devolusion_con_Foco": 53.9,
             "Refinado": [
@@ -12,7 +13,7 @@
                     "Valor_de_objeto": 4
                 },{
                     "Tier": 3,
-                    "Costo" : 3.7,
+                    "Costo" : 3,
                     "Foco": 31,
                     "Valor_de_objeto": 8
                 },{
