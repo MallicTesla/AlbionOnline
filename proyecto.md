@@ -1,176 +1,315 @@
-# Proyecto: Capturador de Mercado de Albion Online
+# Proyecto — Capturador de Mercado de Albion Online (Versión Definitiva)
 
-## Objetivo del proyecto
+> **Versión:** 1.0
+>
+> **Sistema operativo:** Windows 10 / Windows 11
+>
+> **Lenguaje:** Python 3.12+
+>
+> **Editor recomendado:** Visual Studio Code
 
-Crear un programa en Python que capture los paquetes UDP de Albion
-Online, identifique los mensajes del mercado, decodifique únicamente
-información obtenida de capturas reales y guarde todos los datos en una
-base SQLite local.
+---
 
-> **Importante:** Este proyecto no modifica el juego, no automatiza
-> acciones, no utiliza OCR ni inyección de código. Toda la información
-> proviene exclusivamente de paquetes de red capturados localmente.
+# Objetivo del proyecto
 
-------------------------------------------------------------------------
+Crear un programa en Python que capture los paquetes de red de **Albion Online**, identifique los mensajes relacionados con el mercado, extraiga información de precios **únicamente a partir de capturas reales** y guarde todos esos datos en una base SQLite local.
+
+El proyecto está pensado para desarrollarse **paso por paso**, sin omitir etapas y con pruebas obligatorias después de cada una.
+
+---
 
 # Reglas obligatorias del proyecto
 
--   Todo el código debe estar en español.
--   Todos los comentarios deben estar en español.
--   Variables, funciones, clases, archivos, carpetas y tablas SQLite
-    estarán en español.
--   No inventar datos del protocolo Photon.
--   Si un dato no fue comprobado mediante una captura real, debe
-    marcarse como **PENDIENTE DE VERIFICAR CON CAPTURA REAL**.
--   No agregar librerías nuevas sin explicar por qué son necesarias.
--   Nunca saltar un paso.
--   Al terminar un paso, detenerse y esperar que el usuario escriba (**Continuar con el Paso X**) a demás dale el mensaje (**Continuar con el Paso X**)
+## Reglas para la IA
 
-------------------------------------------------------------------------
+Estas reglas deben cumplirse durante todo el proyecto.
 
-# Flujo de trabajo obligatorio
+- Todo el código debe estar escrito en español.
+- Todos los comentarios deben estar en español.
+- Todas las funciones, variables, clases, carpetas y archivos deben tener nombres en español.
+- Todas las tablas y columnas de SQLite deben estar en español.
+- Nunca inventar información del protocolo Photon.
+- Nunca asumir puertos, identificadores de eventos ni estructuras de paquetes.
+- Si una información todavía no fue comprobada mediante una captura real, escribir exactamente:
 
-Cada paso seguirá exactamente este orden:
+> **PENDIENTE DE VERIFICAR CON CAPTURA REAL**
 
-1.  Explicación del objetivo.
-2.  Checklist del paso.
-3.  Archivos que se crearán o modificarán.
-4.  Breve descripción de cada archivo nuevo.
-5.  Código completo de los archivos.
-6.  Comandos para ejecutar.
-7.  Prueba obligatoria.
-8.  Resultado esperado.
-9.  Esperar autorización para continuar.
+- Nunca crear archivos antes del paso donde se necesitan.
+- Siempre entregar el archivo completo cuando se cree o modifique.
+- Nunca continuar automáticamente al siguiente paso.
 
-------------------------------------------------------------------------
+## Reglas para el usuario
 
-# Estructura inicial del proyecto
+- Realizar todas las pruebas indicadas.
+- No continuar si una prueba falla.
+- Avisar cualquier diferencia entre el resultado esperado y el obtenido.
 
-La estructura completa **NO se crea desde el principio**. Cada carpeta y
-archivo se crea únicamente cuando el paso correspondiente lo requiera.
+---
 
-``` text
+# Forma de trabajar durante todo el proyecto
+
+Cada paso tendrá exactamente este formato.
+
+1. Objetivo.
+2. Checklist.
+3. Archivos creados o modificados.
+4. Descripción breve de cada archivo.
+5. Código completo.
+6. Cómo ejecutar.
+7. Qué debe hacer el usuario.
+8. Prueba obligatoria.
+9. Errores comunes.
+10. Estado del proyecto.
+11. Esperar autorización.
+
+---
+
+# Estructura del proyecto
+
+> **Importante:** La estructura se crea de forma progresiva. Ningún archivo se crea antes del paso donde corresponde.
+
+```text
 capturador_mercado_albion/
 │
 ├── codigo/
+│   ├── analizadores/
+│   └── interfaz/
+│
 ├── datos/
+│
 ├── pruebas/
-├── requirements.txt
+│
 ├── README.md
-└── .gitignore
+├── requirements.txt
+├── .gitignore
+└── .env
 ```
 
-> La carpeta del entorno virtual será la que Python crea automáticamente
-> (`.venv` o la predeterminada). No se modifica ni se renombra.
+La carpeta del entorno virtual será la creada automáticamente por Python (`.venv`).
 
-------------------------------------------------------------------------
+No se modifica ni se documenta nada sobre esa carpeta.
 
-# Índice general del proyecto
+---
 
--   [ ] Paso 1 --- Crear el proyecto y el entorno virtual.
--   [ ] Paso 2 --- Instalar las librerías necesarias.
--   [ ] Paso 3 --- Crear la estructura inicial del proyecto.
--   [ ] Paso 4 --- Configuración del proyecto (.env y configuracion.py).
--   [ ] Paso 5 --- Detectar interfaces de red.
--   [ ] Paso 6 --- Capturar paquetes UDP.
--   [ ] Paso 7 --- Guardar capturas PCAP.
--   [ ] Paso 8 --- Guardar paquetes en JSON.
--   [ ] Paso 9 --- Crear la base SQLite.
--   [ ] Paso 10 --- Guardar paquetes en SQLite.
--   [ ] Paso 11 --- Analizar encabezados Photon.
--   [ ] Paso 12 --- Detectar eventos del mercado.
--   [ ] Paso 13 --- Importar la base de ítems.
--   [ ] Paso 14 --- Relacionar IDs de ítems.
--   [ ] Paso 15 --- Guardar precios del mercado.
--   [ ] Paso 16 --- Crear la interfaz gráfica.
+# Índice del proyecto
 
-------------------------------------------------------------------------
+## Etapa 1 — Preparación del proyecto
 
-# Paso 1 --- Crear el proyecto y el entorno virtual
+- [ ] Paso 1 — Crear el proyecto y el entorno virtual.
+- [ ] Paso 2 — Instalar las librerías necesarias.
+- [ ] Paso 3 — Crear la estructura inicial del proyecto.
+- [ ] Paso 4 — Configuración del proyecto.
+
+## Etapa 2 — Captura de paquetes
+
+- [ ] Paso 5 — Detectar las interfaces de red.
+- [ ] Paso 6 — Capturar paquetes UDP.
+- [ ] Paso 7 — Guardar capturas PCAP.
+- [ ] Paso 8 — Guardar paquetes JSON.
+
+## Etapa 3 — Base de datos
+
+- [ ] Paso 9 — Crear SQLite.
+- [ ] Paso 10 — Guardar paquetes en SQLite.
+
+## Etapa 4 — Ingeniería inversa de Photon
+
+- [ ] Paso 11 — Analizar encabezado Photon.
+- [ ] Paso 12 — Detectar eventos del mercado.
+
+## Etapa 5 — Información del mercado
+
+- [ ] Paso 13 — Importar la base de ítems.
+- [ ] Paso 14 — Relacionar IDs con nombres.
+- [ ] Paso 15 — Guardar precios del mercado.
+
+## Etapa 6 — Interfaz gráfica
+
+- [ ] Paso 16 — Crear la aplicación para consultar precios.
+
+---
+
+# Capturas de referencia (se usarán durante todo el proyecto)
+
+Estas capturas siempre deberán hacerse exactamente igual.
+
+| Captura | Acción dentro de Albion |
+|---------|-------------------------|
+| Captura A | Caminar durante 10 segundos. |
+| Captura B | Abrir y cerrar el inventario. |
+| Captura C | Abrir Mercado y buscar **Bolsa de Adepto (T4_BAG)**. |
+| Captura D | Buscar **Espada de Adepto (T4_MAIN_SWORD)**. |
+| Captura E | Buscar **Piedra Rúnica**. |
+
+Estas capturas serán la referencia para comparar paquetes.
+
+Nunca cambiar los pasos de estas capturas sin documentarlo.
+
+---
+
+# PASO 1 — Crear el proyecto y el entorno virtual
 
 ## Objetivo
 
-Preparar el proyecto y crear el entorno virtual utilizando la
-herramienta estándar de Python.
+Preparar el proyecto utilizando el Python que ya está instalado.
 
 ## Checklist
 
--   [ ] Crear la carpeta del proyecto.
--   [ ] Crear el entorno virtual.
--   [ ] Activar el entorno virtual.
--   [ ] Actualizar pip.
--   [ ] Verificar que Python funciona dentro del entorno.
+- [ ] Crear la carpeta del proyecto.
+- [ ] Crear el entorno virtual.
+- [ ] Activar el entorno virtual.
+- [ ] Actualizar `pip`.
+- [ ] Verificar Python y `pip`.
 
-## Archivos que se crean
+## Archivos creados
 
 **Ninguno.**
 
+## Qué debe hacer el usuario
+
+### Preparación
+
+- Cerrar Visual Studio Code si estaba abierto.
+- Abrir PowerShell.
+
+### Acción
+
+Ejecutar:
+
+```powershell
+mkdir capturador_mercado_albion
+cd capturador_mercado_albion
+
+python -m venv .venv
+
+.venv\Scripts\Activate.ps1
+
+python -m pip install --upgrade pip
+```
+
 ## Prueba obligatoria
 
--   `python --version`
--   `pip --version`
+Ejecutar:
+
+```powershell
+python --version
+pip --version
+```
 
 ## Resultado esperado
 
-El entorno virtual queda activo y listo.
+- Aparece `(.venv)` al principio de la consola.
+- Se muestra la versión de Python.
+- Se muestra la versión de `pip`.
 
-**Esperar autorización para continuar con el Paso 2.**
+## Errores comunes
 
-------------------------------------------------------------------------
+- No aparece `(.venv)`.
+- PowerShell bloquea scripts.
 
-# Paso 2 --- Instalar las librerías necesarias
+## Estado del proyecto
+
+- [x] Entorno virtual listo.
+- [ ] Dependencias instaladas.
+
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 2**
+
+---
+
+# PASO 2 — Instalar las librerías necesarias
 
 ## Objetivo
 
-Instalar únicamente las dependencias necesarias para comenzar el
-proyecto.
+Instalar únicamente las dependencias del proyecto.
 
 ## Checklist
 
--   [ ] Instalar Scapy.
--   [ ] Instalar psutil.
--   [ ] Instalar SQLAlchemy.
--   [ ] Instalar aiosqlite.
--   [ ] Instalar Rich.
--   [ ] Instalar python-dotenv.
--   [ ] Generar requirements.txt.
+- [ ] Instalar Scapy.
+- [ ] Instalar psutil.
+- [ ] Instalar SQLAlchemy.
+- [ ] Instalar aiosqlite.
+- [ ] Instalar Rich.
+- [ ] Instalar python-dotenv.
+- [ ] Crear `requirements.txt`.
 
-## Archivos que se crean
+## Archivos creados
 
 ### requirements.txt
 
-Lista completa de dependencias del proyecto.
+Lista de dependencias utilizadas por el proyecto.
+
+## Qué debe hacer el usuario
+
+### Preparación
+
+- Entorno virtual activado (`.venv`).
+
+### Acción
+
+Ejecutar:
+
+```powershell
+pip install scapy
+pip install psutil
+pip install sqlalchemy
+pip install aiosqlite
+pip install rich
+pip install python-dotenv
+
+pip freeze > requirements.txt
+```
 
 ## Prueba obligatoria
 
-Ejecutar `pip freeze` y verificar que las dependencias aparecen.
+Abrir `requirements.txt`.
 
-**Esperar autorización para continuar con el Paso 3.**
+Debe contener las librerías instaladas.
 
-------------------------------------------------------------------------
+## Resultado esperado
 
-# Paso 3 --- Crear la estructura inicial del proyecto
+Existe el archivo `requirements.txt`.
+
+## Estado del proyecto
+
+- [x] Dependencias instaladas.
+- [ ] Estructura creada.
+
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 3**
+
+---
+
+# PASO 3 — Crear la estructura inicial del proyecto
 
 ## Objetivo
 
-Crear únicamente las carpetas y archivos necesarios para comenzar a
-programar.
+Crear únicamente las carpetas y archivos necesarios para comenzar.
 
 ## Checklist
 
--   [ ] Crear carpeta `codigo`.
--   [ ] Crear carpeta `datos`.
--   [ ] Crear carpeta `pruebas`.
--   [ ] Crear archivo `principal.py`.
--   [ ] Crear archivo `README.md`.
--   [ ] Crear archivo `.gitignore`.
+- [ ] Crear carpeta `codigo`.
+- [ ] Crear carpeta `datos`.
+- [ ] Crear carpeta `pruebas`.
+- [ ] Crear `principal.py`.
+- [ ] Crear `README.md`.
+- [ ] Crear `.gitignore`.
 
-## Archivos que se crean
+## Archivos creados
 
 ### codigo/principal.py
 
-Punto de entrada del programa. Desde aquí comenzará la ejecución del
-proyecto.
+Punto de entrada del programa.
 
 ### README.md
 
@@ -178,31 +317,61 @@ Documentación general del proyecto.
 
 ### .gitignore
 
-Archivos y carpetas que Git no debe controlar.
+Archivos que Git debe ignorar.
+
+## Qué debe hacer el usuario
+
+### Preparación
+
+Estar dentro de `capturador_mercado_albion`.
+
+### Acción
+
+Crear exactamente esta estructura.
+
+```text
+capturador_mercado_albion/
+│
+├── codigo/
+├── datos/
+├── pruebas/
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
 
 ## Prueba obligatoria
 
-Verificar que la estructura de carpetas coincide exactamente con la del
-paso.
+Verificar que la estructura coincide exactamente.
 
-**Esperar autorización para continuar con el Paso 4.**
+## Estado del proyecto
 
-------------------------------------------------------------------------
+- [x] Estructura creada.
+- [ ] Configuración creada.
 
-# Paso 4 --- Configuración del proyecto
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 4**
+
+---
+
+# PASO 4 — Configuración del proyecto
 
 ## Objetivo
 
-Crear la configuración central del proyecto y cargar variables desde
-`.env`.
+Centralizar la configuración del proyecto.
 
 ## Checklist
 
--   [ ] Crear `.env`.
--   [ ] Crear `codigo/configuracion.py`.
--   [ ] Leer las variables correctamente.
+- [ ] Crear `.env`.
+- [ ] Crear `configuracion.py`.
+- [ ] Leer correctamente las variables.
 
-## Archivos que se crean
+## Archivos creados
 
 ### .env
 
@@ -210,196 +379,429 @@ Configuración editable del proyecto.
 
 ### codigo/configuracion.py
 
-Carga y valida la configuración.
+Carga la configuración del proyecto.
+
+## Qué debe hacer el usuario
+
+### Acción
+
+Crear `.env` únicamente con los valores indicados durante el paso.
 
 ## Prueba obligatoria
 
-Ejecutar un script que imprima la configuración cargada.
+Ejecutar un programa que imprima las variables cargadas.
 
-**Esperar autorización para continuar con el Paso 5.**
+## Resultado esperado
 
-------------------------------------------------------------------------
+Se muestran correctamente todas las variables.
 
-# Paso 5 --- Detectar interfaces de red
+## Estado del proyecto
+
+- [x] Configuración creada.
+- [ ] Interfaces detectadas.
+
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 5**
+
+---
+
+# PASO 5 — Detectar interfaces de red
 
 ## Objetivo
 
-Detectar todas las interfaces de red disponibles mediante Scapy.
+Encontrar la interfaz de red que utilizará Albion Online.
 
 ## Checklist
 
--   [ ] Crear `codigo/captura_paquetes.py`.
--   [ ] Mostrar todas las interfaces.
--   [ ] Identificar la interfaz utilizada por Albion.
+- [ ] Crear `captura_paquetes.py`.
+- [ ] Mostrar todas las interfaces disponibles.
+- [ ] Identificar la interfaz correcta.
 
-## Archivos que se crean
+## Archivos creados
 
 ### codigo/captura_paquetes.py
 
-Funciones relacionadas con la captura de paquetes de red.
+Contendrá todas las funciones relacionadas con la captura de paquetes.
+
+## Qué debe hacer el usuario
+
+### Preparación
+
+- [ ] Npcap instalado.
+- [ ] Conexión a Internet funcionando.
+- [ ] Albion **cerrado**.
+
+### Acción
+
+1. Ejecutar el programa que lista las interfaces.
+2. Anotar el nombre exacto de la interfaz conectada a Internet.
 
 ## Prueba obligatoria
 
-Debe mostrarse una lista de interfaces disponibles.
+La consola debe mostrar una lista similar a:
 
-**Esperar autorización para continuar con el Paso 6.**
+- Ethernet
+- Wi-Fi
+- Npcap Loopback
+- Adaptadores virtuales
 
-------------------------------------------------------------------------
+## Resultado esperado
 
-# Paso 6 --- Capturar paquetes UDP
+El usuario identifica la interfaz que utilizará el proyecto.
+
+## Qué debe anotar el usuario
+
+- Nombre exacto.
+- Si es Wi-Fi o Ethernet.
+
+## Estado del proyecto
+
+- [x] Interfaz identificada.
+- [ ] Captura UDP.
+
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 6**
+
+---
+
+# PASO 6 — Capturar paquetes UDP
 
 ## Objetivo
 
-Capturar paquetes UDP y mostrarlos por consola.
+Capturar paquetes UDP y mostrarlos en pantalla.
 
 ## Checklist
 
--   [ ] Capturar paquetes UDP.
--   [ ] Mostrar origen, destino, puertos y tamaño.
+- [ ] Capturar paquetes UDP.
+- [ ] Mostrar IP origen.
+- [ ] Mostrar IP destino.
+- [ ] Mostrar puertos.
+- [ ] Mostrar tamaño del paquete.
 
-## Archivos que se modifican
+## Archivos modificados
 
 ### codigo/captura_paquetes.py
 
-Se agrega la lógica de captura.
+Se agrega la captura UDP.
+
+## Qué debe hacer el usuario
+
+### Preparación
+
+- [ ] Programa de captura abierto.
+- [ ] Albion Online abierto.
+- [ ] Personaje conectado.
+- [ ] Personaje dentro del mundo (no en pantalla de selección).
+
+### Acción
+
+1. Caminar durante **10 segundos**.
+2. Abrir el inventario.
+3. Esperar **3 segundos**.
+4. Cerrar el inventario.
+5. Caminar otros **5 segundos**.
 
 ## Prueba obligatoria
 
-Al abrir Albion deben aparecer paquetes UDP.
+Durante todas esas acciones la consola debe mostrar paquetes UDP.
 
-**Esperar autorización para continuar con el Paso 7.**
+## Resultado esperado
 
-------------------------------------------------------------------------
+Se imprimen continuamente paquetes.
 
-# Paso 7 --- Guardar capturas PCAP
+## Errores comunes
+
+- No aparecen paquetes.
+- Se eligió una interfaz incorrecta.
+
+## Estado del proyecto
+
+- [x] Captura UDP funcionando.
+- [ ] Captura PCAP.
+
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 7**
+
+---
+
+# PASO 7 — Guardar capturas PCAP
 
 ## Objetivo
 
-Guardar todos los paquetes capturados en archivos `.pcap`.
+Guardar los paquetes en archivos `.pcap`.
 
 ## Checklist
 
--   [ ] Crear carpeta `datos/paquetes_crudos`.
--   [ ] Guardar una captura por sesión.
+- [ ] Crear carpeta `datos/paquetes_crudos`.
+- [ ] Guardar una captura por sesión.
 
-## Archivos que se crean
+## Archivos creados
 
 ### datos/paquetes_crudos/
 
-Contendrá las capturas PCAP.
+Almacenará todos los archivos `.pcap`.
+
+## Qué debe hacer el usuario
+
+### Preparación
+
+- [ ] Programa capturando paquetes.
+- [ ] Albion abierto.
+- [ ] Ciudad: **Martlock**.
+
+### Acción (Captura C)
+
+1. Abrir el Mercado.
+2. Buscar exactamente:
+
+   **Bolsa de Adepto (T4_BAG)**
+
+3. Esperar **5 segundos**.
+4. No mover el personaje.
+5. Cerrar el Mercado.
+6. Detener la captura.
 
 ## Prueba obligatoria
 
-Abrir el archivo PCAP en Wireshark.
+Debe existir un archivo `.pcap`.
 
-**Esperar autorización para continuar con el Paso 8.**
+## Prueba manual
 
-------------------------------------------------------------------------
+Abrir el archivo con Wireshark.
 
-# Paso 8 --- Guardar paquetes en JSON
+## Resultado esperado
+
+Wireshark muestra paquetes UDP.
+
+## Estado del proyecto
+
+- [x] Captura PCAP creada.
+- [ ] Captura JSON.
+
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 8**
+
+---
+
+# PASO 8 — Guardar paquetes JSON
 
 ## Objetivo
 
-Guardar cada paquete capturado también en formato JSON.
+Guardar todos los paquetes también como archivos JSON.
 
 ## Checklist
 
--   [ ] Crear carpeta `datos/paquetes_json`.
--   [ ] Guardar timestamp, IPs, puertos y payload hexadecimal.
+- [ ] Crear carpeta `datos/paquetes_json`.
+- [ ] Guardar payload hexadecimal.
+- [ ] Guardar IPs y puertos.
 
-## Archivos que se crean
+## Archivos creados
 
 ### datos/paquetes_json/
 
-Archivos JSON de cada paquete.
+Archivos JSON de cada sesión.
+
+## Qué debe hacer el usuario
+
+### Preparación
+
+- [ ] Programa ejecutándose.
+- [ ] Albion abierto.
+- [ ] Ciudad: Martlock.
+
+### Acción
+
+Repetir exactamente la captura del Paso 7.
+
+1. Buscar **Bolsa de Adepto**.
+2. Esperar **5 segundos**.
+3. Cerrar Mercado.
 
 ## Prueba obligatoria
 
-Verificar que se generan archivos JSON correctamente.
+Debe aparecer un archivo JSON nuevo.
 
-**Esperar autorización para continuar con el Paso 9.**
+## Resultado esperado
 
-------------------------------------------------------------------------
+Cada paquete contiene:
 
-# Paso 9 --- Crear la base SQLite
+- timestamp
+- IP origen
+- IP destino
+- puerto origen
+- puerto destino
+- payload hexadecimal
+
+## Estado del proyecto
+
+- [x] JSON funcionando.
+- [ ] SQLite.
+
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 9**
+
+---
+
+# PASO 9 — Crear la base SQLite
 
 ## Objetivo
 
-Crear la base de datos local del proyecto.
+Crear la base de datos del proyecto.
 
 ## Checklist
 
--   [ ] Crear `codigo/base_datos.py`.
--   [ ] Crear `datos/albion.db`.
--   [ ] Crear tablas iniciales.
+- [ ] Crear `base_datos.py`.
+- [ ] Crear `albion.db`.
+- [ ] Crear tablas.
 
-## Archivos que se crean
+## Archivos creados
 
 ### codigo/base_datos.py
 
-Manejo de la base SQLite.
+Administra SQLite.
 
 ### datos/albion.db
 
-Base de datos local.
+Base local.
 
-## Tablas que se crean
+## Tablas creadas
 
--   paquetes
--   precios_mercado
--   items
--   ciudades
+- paquetes
+- precios_mercado
+- items
+- ciudades
+
+## Qué debe hacer el usuario
+
+### Acción
+
+Ejecutar el programa que crea la base.
 
 ## Prueba obligatoria
 
-Abrir la base y verificar las tablas.
+Abrir `albion.db` con DB Browser for SQLite.
 
-**Esperar autorización para continuar con el Paso 10.**
+## Resultado esperado
 
-------------------------------------------------------------------------
+Las cuatro tablas existen.
 
-# Paso 10 --- Guardar paquetes en SQLite
+## Estado del proyecto
+
+- [x] Base creada.
+- [ ] Guardado de paquetes.
+
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 10**
+
+---
+
+# PASO 10 — Guardar paquetes en SQLite
 
 ## Objetivo
 
-Registrar todos los paquetes capturados en la base.
+Guardar todos los paquetes capturados.
 
 ## Checklist
 
--   [ ] Insertar paquetes.
--   [ ] Evitar duplicados.
+- [ ] Insertar paquetes.
+- [ ] Evitar duplicados.
 
-## Archivos que se modifican
+## Archivos modificados
 
 ### codigo/base_datos.py
 
-Inserción de paquetes.
+Inserta paquetes.
 
 ### codigo/captura_paquetes.py
 
-Guardar paquetes automáticamente.
+Guarda automáticamente cada paquete.
+
+## Qué debe hacer el usuario
+
+### Preparación
+
+- [ ] Albion abierto.
+- [ ] Ciudad: Martlock.
+
+### Acción
+
+Buscar exactamente estos tres ítems.
+
+1. **Bolsa de Adepto**
+2. Esperar **5 segundos**.
+
+3. **Espada de Adepto**
+4. Esperar **5 segundos**.
+
+5. **Piedra Rúnica**
+6. Esperar **5 segundos**.
+
+Cerrar Mercado.
 
 ## Prueba obligatoria
 
-Verificar registros dentro de SQLite.
+Abrir SQLite.
 
-**Esperar autorización para continuar con el Paso 11.**
+La tabla `paquetes` debe tener registros nuevos.
 
-------------------------------------------------------------------------
+## Estado del proyecto
 
-# Paso 11 --- Analizar encabezados Photon
+- [x] Paquetes almacenados.
+- [ ] Photon.
+
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 11**
+
+---
+
+# PASO 11 — Analizar encabezado Photon
 
 ## Objetivo
 
-Separar encabezado y payload del protocolo Photon.
+Separar encabezado y payload.
 
 ## Checklist
 
--   [ ] Crear carpeta `codigo/analizadores`.
--   [ ] Crear `utilidades_paquetes.py`.
--   [ ] Crear `photon.py`.
+- [ ] Crear carpeta `analizadores`.
+- [ ] Crear `utilidades_paquetes.py`.
+- [ ] Crear `photon.py`.
 
-## Archivos que se crean
+## Archivos creados
 
 ### codigo/analizadores/utilidades_paquetes.py
 
@@ -409,53 +811,161 @@ Funciones para leer datos binarios.
 
 Analizador del encabezado Photon.
 
+## Qué debe hacer el usuario
+
+### Preparación
+
+Usar el archivo PCAP generado en el Paso 7.
+
+### Acción
+
+Ejecutar el analizador sobre ese archivo.
+
 ## Prueba obligatoria
 
-Separar encabezado y payload de paquetes reales.
+Debe mostrar:
 
-**Esperar autorización para continuar con el Paso 12.**
+- Tamaño del paquete.
+- Tamaño del encabezado.
+- Tamaño del payload.
 
-------------------------------------------------------------------------
+## Resultado esperado
 
-# Paso 12 --- Detectar eventos del mercado
+No debe interpretar eventos todavía.
+
+## Estado del proyecto
+
+- [x] Photon separado.
+- [ ] Eventos del mercado.
+
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 12**
+
+---
+
+# PASO 12 — Detectar eventos del mercado
 
 ## Objetivo
 
-Encontrar los paquetes que pertenecen al mercado comparando capturas
-reales.
+Encontrar los paquetes exclusivos del mercado.
 
 ## Checklist
 
--   [ ] Crear `mercado.py`.
--   [ ] Registrar observaciones.
--   [ ] Marcar eventos candidatos.
+- [ ] Crear `mercado.py`.
+- [ ] Comparar capturas.
+- [ ] Registrar observaciones.
 
-## Archivos que se crean
+## Archivos creados
 
 ### codigo/analizadores/mercado.py
 
-Analizador de eventos relacionados con el mercado.
+Analizador específico del mercado.
+
+## Qué debe hacer el usuario
+
+Realizar tres capturas distintas.
+
+---
+
+### Captura A — Movimiento
+
+#### Preparación
+
+- Albion abierto.
+- Martlock.
+
+#### Acción
+
+Caminar durante **10 segundos**.
+
+Guardar captura.
+
+---
+
+### Captura B — Inventario
+
+#### Preparación
+
+- Mismo personaje.
+- Misma ciudad.
+
+#### Acción
+
+Abrir inventario durante **10 segundos**.
+
+Cerrar inventario.
+
+Guardar captura.
+
+---
+
+### Captura C — Mercado
+
+#### Preparación
+
+- Martlock.
+
+#### Acción
+
+Abrir Mercado.
+
+Buscar:
+
+**Bolsa de Adepto**
+
+Esperar **10 segundos**.
+
+Cerrar Mercado.
+
+Guardar captura.
+
+---
 
 ## Prueba obligatoria
 
-Identificar candidatos reales sin asumir IDs.
+El programa debe indicar qué paquetes aparecen solamente en la Captura C.
 
-**Esperar autorización para continuar con el Paso 13.**
+## Resultado esperado
 
-------------------------------------------------------------------------
+Lista de paquetes candidatos.
 
-# Paso 13 --- Importar la base de ítems
+## IMPORTANTE
+
+No asignar nombres ni IDs todavía.
+
+## Estado del proyecto
+
+- [x] Candidatos encontrados.
+- [ ] Base de ítems.
+
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 13**
+
+---
+
+# PASO 13 — Importar la base de ítems
 
 ## Objetivo
 
-Importar la base pública de ítems de Albion.
+Importar `items.json`.
 
 ## Checklist
 
--   [ ] Descargar `items.json`.
--   [ ] Importarlo a SQLite.
+- [ ] Descargar base de ítems.
+- [ ] Guardarla en `datos`.
+- [ ] Importarla a SQLite.
 
-## Archivos que se crean
+## Archivos creados
 
 ### datos/items.json
 
@@ -463,91 +973,252 @@ Base pública de ítems.
 
 ### codigo/modelos.py
 
-Modelos de acceso a los datos.
+Modelos de acceso.
+
+## Qué debe hacer el usuario
+
+### Acción
+
+Colocar `items.json` dentro de la carpeta `datos`.
 
 ## Prueba obligatoria
 
-Consultar un ítem por `UniqueName`.
+Consultar un `UniqueName`.
 
-**Esperar autorización para continuar con el Paso 14.**
+## Resultado esperado
 
-------------------------------------------------------------------------
+Devuelve información del ítem.
 
-# Paso 14 --- Relacionar IDs de ítems
+## Estado del proyecto
+
+- [x] Ítems importados.
+- [ ] Resolver IDs.
+
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 14**
+
+---
+
+# PASO 14 — Relacionar IDs de ítems
 
 ## Objetivo
 
-Convertir IDs de los paquetes en nombres de ítems.
+Convertir IDs encontrados en nombres reales.
 
 ## Checklist
 
--   [ ] Buscar IDs.
--   [ ] Mostrar nombre localizado.
+- [ ] Leer IDs desde SQLite.
+- [ ] Buscar nombres.
+- [ ] Mostrar nombre localizado.
 
-## Archivos que se modifican
+## Archivos modificados
 
 ### codigo/modelos.py
 
 Funciones de búsqueda.
 
+## Qué debe hacer el usuario
+
+### Preparación
+
+Utilizar la captura del Paso 10.
+
+### Acción
+
+Buscar el ID correspondiente a:
+
+- Bolsa de Adepto.
+- Espada de Adepto.
+
 ## Prueba obligatoria
 
-Mostrar correctamente el nombre de un ítem conocido.
+El programa debe mostrar esos nombres correctamente.
 
-**Esperar autorización para continuar con el Paso 15.**
+## Estado del proyecto
 
-------------------------------------------------------------------------
+- [x] IDs resueltos.
+- [ ] Precios.
 
-# Paso 15 --- Guardar precios del mercado
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 15**
+
+---
+
+# PASO 15 — Guardar precios del mercado
 
 ## Objetivo
 
-Guardar precios reales detectados en SQLite.
+Guardar precios reales.
 
 ## Checklist
 
--   [ ] Registrar ciudad.
--   [ ] Registrar calidad.
--   [ ] Registrar precio de compra y venta.
+- [ ] Detectar ciudad.
+- [ ] Detectar calidad.
+- [ ] Guardar precio de compra.
+- [ ] Guardar precio de venta.
 
-## Archivos que se modifican
+## Archivos modificados
 
 ### codigo/analizadores/mercado.py
 
-Extracción de precios.
+Extrae información del mercado.
 
 ### codigo/base_datos.py
 
-Inserción de precios.
+Guarda precios.
+
+## Qué debe hacer el usuario
+
+### Preparación
+
+- Albion abierto.
+- Ciudad: **Martlock**.
+
+### Acción completa de prueba
+
+Realizar exactamente este recorrido.
+
+#### Búsqueda 1
+
+Buscar:
+
+**Bolsa de Adepto**
+
+Esperar **5 segundos**.
+
+#### Búsqueda 2
+
+Buscar:
+
+**Espada de Adepto**
+
+Esperar **5 segundos**.
+
+#### Búsqueda 3
+
+Buscar:
+
+**Piedra Rúnica**
+
+Esperar **5 segundos**.
+
+#### Finalizar
+
+Cerrar Mercado.
+
+Esperar **3 segundos**.
+
+Detener captura.
 
 ## Prueba obligatoria
 
-Ver un precio real guardado en la base.
+Abrir SQLite.
 
-**Esperar autorización para continuar con el Paso 16.**
+La tabla `precios_mercado` debe contener tres registros nuevos.
 
-------------------------------------------------------------------------
+## Resultado esperado
 
-# Paso 16 --- Crear la interfaz gráfica
+Cada registro contiene:
+
+- Ítem.
+- Ciudad.
+- Calidad.
+- Precio.
+- Fecha.
+
+## Estado del proyecto
+
+- [x] Precios almacenados.
+- [ ] Interfaz gráfica.
+
+## IMPORTANTE
+
+**DETENERSE AQUÍ.**
+
+Esperar:
+
+> **Continuar con el Paso 16**
+
+---
+
+# PASO 16 — Crear la interfaz gráfica
 
 ## Objetivo
 
-Crear una aplicación de escritorio para consultar los datos capturados.
+Crear una aplicación para consultar la información almacenada.
 
 ## Checklist
 
--   [ ] Crear ventana principal.
--   [ ] Buscar ítems.
--   [ ] Mostrar historial de precios.
+- [ ] Crear ventana principal.
+- [ ] Buscar ítems.
+- [ ] Mostrar historial.
+- [ ] Mostrar precios por ciudad.
 
-## Archivos que se crean
+## Archivos creados
 
 ### codigo/interfaz.py
 
-Interfaz gráfica del proyecto.
+Ventana principal del proyecto.
+
+## Qué debe hacer el usuario
+
+### Preparación
+
+Tener una base `albion.db` con datos obtenidos en el Paso 15.
+
+### Acción
+
+Abrir la aplicación.
+
+Buscar:
+
+- Bolsa de Adepto.
+- Espada de Adepto.
+- Piedra Rúnica.
 
 ## Prueba obligatoria
 
-Buscar un ítem y visualizar precios almacenados.
+La aplicación debe mostrar los precios almacenados para esos ítems.
 
-**Proyecto finalizado.**
+## Resultado esperado
+
+La interfaz consulta SQLite correctamente.
+
+## Estado final del proyecto
+
+- [x] Entorno virtual.
+- [x] Dependencias.
+- [x] Captura UDP.
+- [x] Captura PCAP.
+- [x] Captura JSON.
+- [x] SQLite.
+- [x] Photon.
+- [x] Eventos del mercado.
+- [x] Base de ítems.
+- [x] Relación de IDs.
+- [x] Precios.
+- [x] Interfaz gráfica.
+
+# Reglas finales del proyecto
+
+## Nunca avanzar automáticamente.
+
+La IA debe detenerse siempre al finalizar un paso y esperar una orden explícita del usuario.
+
+### Órdenes válidas
+
+- `Continuar con el Paso 2`
+- `Continuar con el Paso 7`
+- `Continuar con el Paso siguiente`
+
+Hasta recibir esa autorización **no se crea código nuevo, no se modifican archivos y no se avanza al siguiente paso**.

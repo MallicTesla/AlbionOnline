@@ -1,0 +1,3 @@
+El dueño del local te cobra una tasa basada en la "nutrición" que consume el crafteo. El juego calcula cuánta nutrición se gasta multiplicando el Valor de Objeto del bloque por el porcentaje de impuesto de la tienda. A menor valor de objeto, menos plata pagas de impuesto por cada bloque.
+
+ Calcular el progreso de los Diarios de Trabajador: Si llevas un Diario de Cantera en el inventario mientras refinas, este se llenará más rápido o más lento dependiendo de la suma total del Valor de Objeto de los bloques que crees.
